@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
+        }
+
+        th:nth-child(even),
+        td:nth-child(even) {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="color:rgb(235, 124, 124);text-align:center;">Order Data </h2>
+    <table style="background-color:white">
+        <tr>
+            {{#each users }}
+            <td valign="top">
+                <table>
+                    <tr>
+                        <td class="FieldLabel">
+                            Customer:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.customerID}} </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            product:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.productID}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            Order Date:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.created}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            couponID:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.couponID}}</div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td valign="top">
+                <table style="float: right" class="RightAlignedInputs">
+                    <tr>
+                        <td class="FieldLabel">
+                            Address:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly" style="float: right">
+                                {{this.shippingAddress.address}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            City:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly" style="float: right">
+                                {{this.shippingAddress.city}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            Postal Code:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly" style="float: right">
+                                {{this.shippingAddress.postalCode}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            Ship Country:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly" style="float: right">
+                                {{this.shippingAddress.country}}</div>
+                        </td>
+
+                    </tr>
+                </table>
+            </td>
+            {{/each}}
+        </tr>
+
+        <tr>
+            <td colspan="2" style="float: center">
+                product Details
+            </td>
+            {{#each users.pro}}
+        </tr>
+        <tr>
+            <td valign="bottom">
+                <table style="margin-right: 4px;" class="RightAlignedInputs">
+                    <tr>
+                        <td class="FieldLabel">
+                            productName:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.productName}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            brand:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.brand}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            model:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.model}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            category:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.category}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            price:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.price}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            date:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.date}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            color:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.color}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="FieldLabel">
+                            qty:
+                        </td>
+                        <td>
+                            <div class="FieldPlaceholder DataOnly">
+                                {{this.qty}}</div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="float: center">
+                            product Details
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="bottom">
+                            <table style="margin-right: 4px;" class="RightAlignedInputs">
+                                <tr>
+                                    <td class="FieldLabel">
+                                        productName:
+                                    </td>
+                                    <td>
+                                        <div class="FieldPlaceholder DataOnly">
+                                            {{this.productName}}</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="FieldLabel">
+                                        brand:
+                                    </td>
+                                    <td>
+                                        <div class="FieldPlaceholder DataOnly">
+                                            {{this.brand}}</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="FieldLabel">
+                                        model:
+                                    </td>
+                                    <td>
+                                        <div class="FieldPlaceholder DataOnly">
+                                            {{this.model}}</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="FieldLabel">
+                                        category:
+                                    </td>
+                                    <td>
+                                        <div class="FieldPlaceholder DataOnly">
+                                            {{this.category}}</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="FieldLabel">
+                                        price:
+                                    </td>
+                                    <td>
+                                        <div class="FieldPlaceholder DataOnly">
+                                            {{this.price}}</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="FieldLabel">
+                                        date:
+                                    </td>
+                                    <td>
+                                        <div class="FieldPlaceholder DataOnly">
+                                            {{this.date}}</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="FieldLabel">
+                                        color:
+                                    </td>
+                                    <td>
+                                        <div class="FieldPlaceholder DataOnly">
+                                            {{this.color}}</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="FieldLabel">
+                                        qty:
+                                    </td>
+                                    <td>
+                                        <div class="FieldPlaceholder DataOnly">
+                                            {{this.qty}}</div>
+                                    </td>
+                                    {{/each}}
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right">
+                            <table style="margin-right: 10px;" class="RightAlignedInputs">
+                                <tr>
+                                    {{#each users }}
+                                    <td class="FieldLabel">
+                                        Subtotal:
+                                    </td>
+                                    <td align="right">
+                                        <div class="FieldPlaceholder DataOnly" style="float: right">
+                                            {{this.totalAmount}}</div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="FieldLabel">
+                                        Total:
+                                    </td>
+                                    <td>
+                                        <div class="FieldPlaceholder DataOnly" style="float: right">
+                                            {{this.totalAmount}}</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <br />
+                        {{/each}}
+                    </tr>
+                </table>
+</body>
+
+</html>
